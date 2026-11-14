@@ -1,24 +1,12 @@
 // written by build-album.mjs: don't edit, add files to assets/ instead
 window.ALBUM = [
   {
-    "src": "assets/2666.PNG",
-    "title": "2666"
-  },
-  {
-    "src": "assets/2868.PNG",
-    "title": "2868"
-  },
-  {
     "src": "assets/2987.PNG",
     "title": "2987"
   },
   {
     "src": "assets/4058.JPG",
     "title": "4058"
-  },
-  {
-    "src": "assets/1000068350.JPG",
-    "title": "1000068350"
   },
   {
     "src": "assets/IMG_7133.JPG",
