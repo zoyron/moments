@@ -13,6 +13,18 @@
     content="Ichigo ichie: one time, one meeting. A personal album of photographs and little films, kept as they happened.">
   <meta name="theme-color" content="#ffffff">
 
+  <!-- the card shown when the link is shared (WhatsApp, iMessage, LinkedIn, X, Slack) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://omoide.sarlloc.com/">
+  <meta property="og:title" content="Ichigo Ichie — a personal album">
+  <meta property="og:description"
+    content="One time, one meeting. Photographs and little films, kept as they happened.">
+  <meta property="og:image" content="https://omoide.sarlloc.com/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The cover of Ichigo Ichie, a cream album with a cherry blossom branch and a red seal">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -871,10 +883,10 @@
         g.textBaseline = 'middle';
         const ch = [...text];
         if (ch.length === 4) {
-          // a four-character seal reads like the real thing: right column top to bottom, then the left
+          // four characters sit in a 2×2 square, read in rows: 一期 / 一会
           g.font = `bold ${Math.round(size * 0.3)}px ${SERIF}`;
           const d = size * 0.19;
-          [[d, -d], [d, d], [-d, -d], [-d, d]].forEach(([cx, cy], i) => g.fillText(ch[i], cx, cy + 1));
+          [[-d, -d], [d, -d], [-d, d], [d, d]].forEach(([cx, cy], i) => g.fillText(ch[i], cx, cy + 1));
         } else {
           g.font = `bold ${Math.round(size * 0.44)}px ${SERIF}`;
           g.fillText(text, 0, 1);
